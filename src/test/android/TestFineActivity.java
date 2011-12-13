@@ -50,8 +50,6 @@ TextView ItemTitle;
         Btadd=(Button)this.findViewById(R.id.button1);
 
         final ListView list = (ListView) findViewById(R.id.list01); 
-
-
         ListView.OnHierarchyChangeListener listitemclick = new ListView.OnHierarchyChangeListener() {
         	
         	@Override
@@ -61,11 +59,11 @@ TextView ItemTitle;
 
         		  final TextView txtnum = (TextView) child.findViewById(R.id.ItemTitle);
         		  //final TextView Current = (TextView) child.findViewById(R.id.Current);
-                  imagebt = (ImageButton)child.findViewById(R.id.image1);
-                  checkBox1 = (CheckBox)child.findViewById(R.id.checkBox1);
+                  //imagebt = (ImageButton)child.findViewById(R.id.image1);
+                  //checkBox1 = (CheckBox)child.findViewById(R.id.checkBox1);
                   Log.e("","xxxxxxxxxxxxxx");
                   
-                  checkBox1.setOnClickListener(new CheckBox.OnClickListener()//∑sºW
+                  checkBox1.setOnClickListener(new CheckBox.OnClickListener()//ÔøΩsÔøΩW
                   {
                 	  public void onClick(View V)
                 	{
@@ -78,25 +76,22 @@ TextView ItemTitle;
           	      final AlertDialog.Builder builder = new AlertDialog.Builder(TestFineActivity.this);  
       	        builder.setCancelable(false);  
       	       // builder.setIcon(R.drawable.icon);  
-      	        builder.setTitle("ßAΩT©wßAßπ¶®§F≥o∂µ§uß@§F∂‹?");
+      	        builder.setTitle("‰Ω†Á¢∫ÂÆö‰Ω†ÂÆåÊàê‰∫ÜÈÄôÈ†ÖÂ∑•‰Ωú‰∫ÜÂóé?");
       	        
-          	        builder.setPositiveButton("ΩT©w",  
+          	        builder.setPositiveButton("Á¢∫ÂÆö",  
           	                new DialogInterface.OnClickListener() {  
           	                    public void onClick(DialogInterface dialog, int whichButton) { 
           	                    	checkBox1.setChecked(true);
           	                     
           	                     	/*if(checkBox1.isChecked()==true)
           	                     	{	
-          	                     		
           	                     	    Current=Current+1;
-          	                     	    
-          	                     	    
-          	                     	
+
           	                     	}*/
           	                    }
           	                  });
           	       
-          	        builder.setNegativeButton("®˙Æ¯",  
+          	        builder.setNegativeButton("ÂèñÊ∂à",  
           	                new DialogInterface.OnClickListener() {  
           	                    public void onClick(DialogInterface dialog, int whichButton) {  
           	                    	
@@ -116,11 +111,11 @@ TextView ItemTitle;
           	      }); 
                
                   
-                  imagebt.setOnClickListener(new Button.OnClickListener()//∑sºW
+                  imagebt.setOnClickListener(new Button.OnClickListener()//ÔøΩsÔøΩW
                   {
                   	public void onClick(View V)
                   	{
-                  		setTitle("øÔ®˙§Fx"+txtnum.getText().toString());
+                  		setTitle("ÈÅ∏Âèñ‰∫Üx"+txtnum.getText().toString());
                   	}
                   });  
         	 }
@@ -134,7 +129,7 @@ TextView ItemTitle;
 			list.setOnHierarchyChangeListener(listitemclick );
            // list.setAdapter(adapter);
         
-        //•Õ¶®∞ ∫Aarray°A•[§Jº∆æ⁄  
+        //ÔøΩÕ¶ÔøΩÔøΩ ∫AarrayÔøΩAÔøΩ[ÔøΩJÔøΩ∆æÔøΩ  
         final ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();  
           
       	SharedPreferences settings1= getSharedPreferences(PREF,0);
@@ -187,23 +182,15 @@ TextView ItemTitle;
          	Log.e("test", "2");
             intent.putExtras(bundle);
             Log.e("test", "3");
-          
-            
-        
-             
-         	
-         	
-         	
-         	
          	startActivity(intent);
          	Log.e("test", "4");
          	
              
-             setTitle("¨Oß⁄");
-              }  
+             setTitle("Â¢ûÂä†Êñ∞ÁöÑÁõÆÊ®ô");
+          	}  
           });      
     
-    Btadd.setOnClickListener(new Button.OnClickListener()//∑sºW
+    Btadd.setOnClickListener(new Button.OnClickListener()//ÔøΩsÔøΩW
     {
     	public void onClick(View V)
     	{
@@ -212,18 +199,13 @@ TextView ItemTitle;
     	        final EditText edtInput=(EditText)textEntryView.findViewById(R.id.edtInput); 
     	        //final EditText edtInput1=(EditText)textEntryView.findViewById(R.id.Current); 
     	        
-    	        
-    	        
-    	        
-    	        
-    	        
     	        final AlertDialog.Builder builder = new AlertDialog.Builder(TestFineActivity.this);  
     	        builder.setCancelable(false);  
     	       // builder.setIcon(R.drawable.icon);  
-    	        builder.setTitle("ºW•[∑s™∫•ÿº–");  
+    	        builder.setTitle("Â¢ûÂä†Êñ∞ÁöÑÁõÆÊ®ô");  
     	        
     	        builder.setView(textEntryView);  
-    	        builder.setPositiveButton("ΩT©w",  
+    	        builder.setPositiveButton("ok",  
     	                new DialogInterface.OnClickListener() {  
     	                    public void onClick(DialogInterface dialog, int whichButton) { 
     	                    	
@@ -231,7 +213,7 @@ TextView ItemTitle;
     	                    	
     	                    	if(edtInputName.equals(""))
     	                		{        	            			
-    	                			Toast.makeText(TestFineActivity.this, "ø˘ª~!•ºøÈ§J•ÿº–!", Toast.LENGTH_SHORT).show();
+    	                			Toast.makeText(TestFineActivity.this, "‰Ω†Á¢∫ÂÆö‰Ω†ÂÆåÊàê‰∫ÜÈÄôÈ†ÖÂ∑•‰Ωú‰∫ÜÂóé?", Toast.LENGTH_SHORT).show();
     	                  		}
     	                    	        	                		        	            			        	                		       	                  		
     	                    	else{
@@ -247,14 +229,13 @@ TextView ItemTitle;
     	                       
     	                	
     	                		  editor.commit();
-    	                		     	                		
-    	                		  
+
     	                		  //alertDialog.dismiss();
     	                		  //alertDialog.cancel();
     	                    	}}  
     	                });  
 
-    	        builder.setNegativeButton("®˙Æ¯",  
+    	        builder.setNegativeButton("Cancel",  
     	                new DialogInterface.OnClickListener() {  
     	                    public void onClick(DialogInterface dialog, int whichButton) {  
     	                        setTitle("");  
